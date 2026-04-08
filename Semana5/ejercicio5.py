@@ -11,4 +11,7 @@ def potencia_ciclo(base, exponente):
 print(potencia_ciclo(2,3))
 
 def potencia_recursiva(base, exponente):
-    pass
+    if exponente == 0:
+        return 1
+    return base * potencia_recursiva(base, exponente - 1)
+print(potencia_recursiva(3, 4))
