@@ -9,16 +9,14 @@ Debe implementar dos funciones:
 """
 
 def total_ventas_ciclo(ventas):
-    """
-    Retorna el total de ventas usando ciclos.
-    """
-    # Escriba aquí su solución
-    pass
-
+    total = 0
+    for venta in ventas:
+        total += venta
+    return total
+print(total_ventas_ciclo([1500, 2000, 500, 1000]))
 
 def total_ventas_recursivo(ventas):
-    """
-    Retorna el total de ventas usando recursividad.
-    """
-    # Escriba aquí su solución
-    pass
+    if len(ventas) == 0:
+        return 0
+    return ventas[0] + total_ventas_recursivo(ventas[1:])
+print(total_ventas_recursivo([1500, 2000, 500, 1000]))
